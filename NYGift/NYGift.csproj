@@ -42,10 +42,13 @@
   <ItemGroup>
     <Compile Include="Core\Class\Candy.cs" />
     <Compile Include="Core\Class\ChocoCandy.cs" />
-    <Compile Include="Core\Class\Compose.cs" />
+    <Compile Include="Core\Class\ChocoCandyCreator.cs" />
+    <Compile Include="Core\Class\Creator.cs" />
     <Compile Include="Core\Class\Gift.cs" />
     <Compile Include="Core\Class\JellyCandy.cs" />
+    <Compile Include="Core\Class\JellyCandyCreator.cs" />
     <Compile Include="Core\Class\LollipopCandy.cs" />
+    <Compile Include="Core\Class\LollipopCandyCreator.cs" />
     <Compile Include="Core\Enum\Colour.cs" />
     <Compile Include="Core\Enum\Filling.cs" />
     <Compile Include="Core\Enum\Taste.cs" />

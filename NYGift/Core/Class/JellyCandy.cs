@@ -11,19 +11,11 @@ namespace NYGift.Core.Class
         public Taste taste;
 
         public JellyCandy (string candyname, double weightOfOne, string typeCandy, int sugarContentinOne, Taste taste)
-            : base(candyname, weightOfOne, sugarContentinOne, typeCandy)
+            : base(candyname, weightOfOne, typeCandy, sugarContentinOne)
         {
         }
 
-        public override string TypeCandy
-        {
-            get { return "Желейная конфета"; }
-        }
-
-        public string Variety
-        {
-            get { return taste.ToString(); }
-        }
+        
     }
         
 }

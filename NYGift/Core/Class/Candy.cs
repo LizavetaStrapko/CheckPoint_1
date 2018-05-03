@@ -7,11 +7,12 @@ namespace NYGift.Core.Class
 {
     public abstract class Candy
     {
-        public Candy(string candyname, double weightOfOne, int sugarContentinOne, string typeCandy )
+        public Candy(string candyname, double weightOfOne, string typeCandy, int sugarContentinOne)
         {
             CandyName = candyname;
             WeightOfOne = weightOfOne;
             SugarContentinOne = sugarContentinOne;
+            TypeCandy = typeCandy;
         }
 
         public string CandyName { get; set; }
@@ -20,7 +21,8 @@ namespace NYGift.Core.Class
 
         public int SugarContentinOne { get; set; }
 
-        public abstract string TypeCandy { get; }
-               
+        public string TypeCandy { get; set; }
+
+        
     }
 }

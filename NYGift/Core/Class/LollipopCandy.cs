@@ -11,13 +11,9 @@ namespace NYGift.Core.Class
         public Colour colour;
 
         public LollipopCandy(string candyname, double weightOfOne, string typeCandy, int sugarContentinOne, Colour colour)
-            : base(candyname, weightOfOne, sugarContentinOne, typeCandy)
+            : base(candyname, weightOfOne, typeCandy, sugarContentinOne)
         {
         }
         
-        public override string TypeCandy
-        {
-            get { return "Леденец"; }
-        }
     }
 }

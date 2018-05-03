@@ -10,16 +10,12 @@ namespace NYGift.Core.Class
     {
                
         public Filling filling;
-
+        
         public ChocoCandy(string candyname, double weightOfOne, string typeCandy, int sugarContentinOne, Filling filling)
-            : base(candyname, weightOfOne, sugarContentinOne, typeCandy)
+            : base(candyname, weightOfOne,typeCandy, sugarContentinOne)
         {
         }
 
-        public override string TypeCandy
-        {
-            get { string typeCandy;  return typeCandy = "Шоколадная конфета"; }
-        }
-                                
+        
     }
 }
