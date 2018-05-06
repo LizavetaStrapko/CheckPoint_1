@@ -23,6 +23,6 @@ namespace NYGift.Core.Class
 
         public string TypeCandy { get; set; }
 
-        
+        public abstract Candy create(string candyname, double weightOfOne, string typeCandy, int sugarContentinOne);
     }
 }

@@ -7,6 +7,8 @@ namespace NYGift.Core.Class
 {
     public class Gift : Interface.IGift
     {
+
+
         public ICollection<Candy> items;
 
         public Gift()

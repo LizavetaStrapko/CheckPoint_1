@@ -14,35 +14,15 @@ namespace Program
         static void Main(string[] args)
         {
 
-            Creator[] creators = new Creator[3];
-            creators[0] = new ChocoCandyCreator();
-            creators[1] = new LollipopCandyCreator();
-            creators[2] = new JellyCandyCreator();
+           IGift gift = new Gift();
 
-            IGift gift = new Gift();
-
-            foreach (Creator j in creators)
-            {
-                if (j is ChocoCandyCreator)
-                {
-                    gift.Add(j.FactoryMethod("Аленка", 50, "Шоколадная конфета", 10, NYGift.Core.Enum.Filling.Nuts));
-                    gift.Add(j.FactoryMethod("Коммунарка", 20, "Шоколадная конфета", 15, NYGift.Core.Enum.Filling.Nuts));
-                    
-                }
-                if (j is LollipopCandyCreator)
-                {
-                    gift.Add(j.FactoryMethod("Взлетная", 15, "Леденец", 7, NYGift.Core.Enum.Colour.Red));
-                    gift.Add(j.FactoryMethod("Тутти-Фрутти", 17, "Леденец", 11, NYGift.Core.Enum.Colour.Blue));
-                    gift.Add(j.FactoryMethod("Чупа чупс", 30, "Леденец", 10, NYGift.Core.Enum.Colour.Green));
-                }
-
-                if (j is JellyCandyCreator)
-                {
-                    gift.Add(j.FactoryMethod("Maoam", 300, "Желейная конфета", 31, NYGift.Core.Enum.Taste.Grape));
-                    gift.Add(j.FactoryMethod("Maoam", 300, "Желейная конфета", 31, NYGift.Core.Enum.Taste.Cherry));
-                    gift.Add(j.FactoryMethod("Maoam", 300, "Желейная конфета", 31, NYGift.Core.Enum.Taste.Orange));
-                }
-            }
+            
+            gift.Add(new ChocoCandy("Аленка", 50, "Шоколадная конфета", 10, NYGift.Core.Enum.Filling.Nuts));
+            gift.Add(new ChocoCandy("Коммунарка", 20, "Шоколадная конфета", 15, NYGift.Core.Enum.Filling.Nuts));
+            gift.Add(new JellyCandy("Maoam", 300, "Желейная конфета", 31, NYGift.Core.Enum.Taste.Grape));
+            gift.Add(new JellyCandy("Maoam", 300, "Желейная конфета", 31, NYGift.Core.Enum.Taste.Cherry));
+            gift.Add(new JellyCandy("Maoam", 300, "Желейная конфета", 31, NYGift.Core.Enum.Taste.Orange));
+            gift.Add(new LollipopCandy("Взлетная", 15, "Леденец", 7, NYGift.Core.Enum.Colour.Red));
 
 
             Console.WriteLine("Детский подарок сформирован");

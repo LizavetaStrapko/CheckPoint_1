@@ -15,7 +15,10 @@ namespace NYGift.Core.Class
         {
         }
 
-        
+        public override Candy create(string candyname, double weightOfOne, string typeCandy, int sugarContentinOne)
+        {
+            return new JellyCandy(candyname, weightOfOne, typeCandy, sugarContentinOne, taste);
+        }
     }
         
 }
