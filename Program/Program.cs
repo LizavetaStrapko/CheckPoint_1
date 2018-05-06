@@ -24,12 +24,15 @@ namespace Program
             gift.Add(new JellyCandy("Maoam", 300, "Желейная конфета", 31, NYGift.Core.Enum.Taste.Orange));
             gift.Add(new LollipopCandy("Взлетная", 15, "Леденец", 7, NYGift.Core.Enum.Colour.Red));
 
-
             Console.WriteLine("Детский подарок сформирован");
             Console.WriteLine();
-            gift.SortByName();
+            gift.GiftAll();
+
+            Console.WriteLine();
+            
 
             Console.WriteLine("Конфеты в подарке сортированные по имени: ");
+            gift.SortByName();
             foreach (var i in gift.Items)
             {
                 Console.WriteLine(" {0}, вес: {1}, вид: {2}, содержание сахара: {3},"

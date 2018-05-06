@@ -17,12 +17,16 @@ namespace NYGift.Core.Class
 
         public string CandyName { get; set; }
 
-        public double WeightOfOne { get; set; }
+        public double WeightOfOne { get; protected set; }
 
-        public int SugarContentinOne { get; set; }
+        public int SugarContentinOne { get; protected set; }
 
         public string TypeCandy { get; set; }
 
-        public abstract Candy create(string candyname, double weightOfOne, string typeCandy, int sugarContentinOne);
+        public override string ToString()
+        {
+           return string.Format("{0}, Вес: {1}, Вид: {2}, Содержание сахара: {3}",
+                               CandyName, WeightOfOne, TypeCandy, SugarContentinOne);
+        }
     }
 }

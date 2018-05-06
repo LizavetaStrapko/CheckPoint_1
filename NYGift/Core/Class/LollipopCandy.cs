@@ -14,9 +14,14 @@ namespace NYGift.Core.Class
             : base(candyname, weightOfOne, typeCandy, sugarContentinOne)
         {
         }
-        public override Candy create(string candyname, double weightOfOne, string typeCandy, int sugarContentinOne)
+
+        public override string ToString()
         {
-            return new LollipopCandy(candyname, weightOfOne, typeCandy, sugarContentinOne, colour);
+            return string.Format("{0}, Вес: {1}, Вид: {2}, Сахара: {3}, Особенность: {4}",
+                              CandyName, WeightOfOne, TypeCandy, SugarContentinOne, colour);
+            
         }
+
+
     }
 }

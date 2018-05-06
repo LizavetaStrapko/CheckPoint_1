@@ -14,5 +14,6 @@ namespace NYGift.Core.Interface
         void SortByName();
         IEnumerable<Candy> FindBySugarContain(int min, int max);
         double GiftWeight();
+        void GiftAll();
     }
 }

@@ -29,7 +29,7 @@ namespace NYGift.Core.Class
         public void GiftAll()
         {
             foreach (var item in this.items)
-            { item.ToString(); }
+            { Console.WriteLine (item.ToString()); }
         }
 
         public double GiftWeight()
